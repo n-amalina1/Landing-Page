@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!--
     <v-app-bar app>
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -26,9 +27,9 @@
         </div>
       </nav>
     </v-app-bar>
+    -->
     <v-main>
       <Header />
-      <Home />
     </v-main>
 
     <v-footer app> </v-footer>
@@ -37,13 +38,11 @@
 
 <script>
 import Header from "./components/Header.vue";
-import Home from "./components/Home.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    Home,
   },
 };
 </script>

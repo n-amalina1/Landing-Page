@@ -59,14 +59,14 @@ a:hover {
   padding-bottom: 174px;
 }
 .page-title {
-  font-size: 150px;
+  font-size: 10vw;
   line-height: 1;
   color: #fff;
   font-weight: 600;
   text-align: center;
 }
 .page-title2 {
-  font-size: 60px;
+  font-size: 5vw;
   line-height: 1;
   color: #fff;
   font-weight: 600;

@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="section-title mb-0">
-              <h2>Hello</h2>
+              <h2>About Us</h2>
             </div>
           </div>
         </div>
