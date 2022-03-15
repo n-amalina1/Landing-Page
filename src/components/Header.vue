@@ -4,12 +4,14 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <div class="page-caption">
-            <h1 class="page-title">SGUnited Traineeship Programmes</h1>
+            <h1 class="page-title animate__animated animate__bounce animate__infinite">Welcome</h1>
+            <h2 class="page-title2 animate__animated animate__bounce animate__infinite">SGUnited</h2>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!--
   <div class="program-bar">
     <div class="container">
       <div class="text">
@@ -18,6 +20,7 @@
       </div>
     </div>
   </div>
+  -->
 </template>
 
 <script>
@@ -25,7 +28,7 @@ export default {
   name: "Header",
 };
 </script>
-
+``
 <style scoped>
 body {
   -webkit-font-smoothing: antialiased;
@@ -56,7 +59,14 @@ a:hover {
   padding-bottom: 174px;
 }
 .page-title {
-  font-size: 46px;
+  font-size: 150px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+.page-title2 {
+  font-size: 60px;
   line-height: 1;
   color: #fff;
   font-weight: 600;

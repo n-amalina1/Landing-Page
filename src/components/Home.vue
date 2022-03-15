@@ -5,8 +5,7 @@
         <div class="row">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="section-title mb-0">
-              <h2>All about SgUnited Traineeship programmes.</h2>
-              <p>Join us now!!!</p>
+              <h2>Hello</h2>
             </div>
           </div>
         </div>
@@ -72,16 +71,6 @@ p {
 }
 p:last-child {
   margin: 0px;
-}
-ul,
-ol {
-}
-a {
-  text-decoration: none;
-  color: #8d8f90;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .card-section {
