@@ -1,8 +1,8 @@
 <template>
   <v-row no-gutters justify="center" @click="showImage">
     <v-img
-      lazy-src="https://picsum.photos/id/11/1280/720"
-      src="https://bad.src/not/valid"
+      lazy-src="@/assets/sam-goh-971-nTG4d1E-unsplash.jpg"
+      :src="imageUrl"
       height="100vh"
       width="100vw"
     >
@@ -12,10 +12,13 @@
           <v-row class="shrink">
             <v-col cols="12">
               <v-card
-                elevation="2"
-                class="pa-3 animate__animated animate__bounce animate__infinite"
-                ><h1 class="text-center">Hello</h1>
-                <h2 class="text-center">Generation SG</h2></v-card
+                elevation="0"
+                class="pa-16 animate__animated animate__bounce animate__infinite"
+                style="background-color: #0074b9; color: white"
+                ><h1 class="text-h1 text-center">Hello</h1>
+                <h2 class="text-h2 text-center">
+                  Generation Singapore
+                </h2></v-card
               >
             </v-col>
           </v-row>
@@ -23,9 +26,6 @@
         </v-container>
       </template>
     </v-img>
-    <!-- <div id="photo" class="photo slide-in-elliptic-top-fwd" v-if="showPhoto">
-      <img class="responsive" src="@/assets/SgUnited2.jpeg" />
-    </div> -->
   </v-row>
 </template>
 
@@ -35,8 +35,7 @@ import confetti from "canvas-confetti";
 export default {
   name: "Header",
   data: () => ({
-    model: 0,
-    colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
+    imageUrl: "",
     showPhoto: false,
   }),
   mounted: function () {
@@ -76,8 +75,7 @@ export default {
       }, 250);
     },
     showImage() {
-      document.getElementById("header").style.display = "none";
-      this.showPhoto = true;
+      this.imageUrl = require("@/assets/SgUnited2.jpeg");
     },
   },
 };
