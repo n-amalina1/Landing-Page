@@ -3,8 +3,6 @@
     <v-main>
       <Header />
     </v-main>
-
-    <v-footer app> </v-footer>
   </v-app>
 </template>
 
@@ -16,9 +14,8 @@ export default {
   components: {
     Header,
   },
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-
-
-
