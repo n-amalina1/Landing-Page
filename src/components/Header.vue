@@ -1,28 +1,32 @@
 <template>
-  <div class="page-header scale-in-center" id="header" @click="showImage">
+  <v-row no-gutters justify="center" @click="showImage">
     <v-img
-      lazy-src="https://picsum.photos/id/11/10/6"
-      src="https://picsum.photos/id/11/500/300"
+      lazy-src="https://picsum.photos/id/11/1280/720"
+      src="https://bad.src/not/valid"
+      height="100vh"
+      width="100vw"
     >
-      <v-card-title>
-        <h1
-          class="page-title animate__animated animate__bounce animate__infinite"
-        >
-          Hello
-        </h1>
-        <p></p>
-        <p></p>
-        <h2
-          class="page-title2 animate__animated animate__bounce animate__infinite"
-        >
-          Generation SG
-        </h2></v-card-title
-      >
+      <template v-slot:placeholder>
+        <v-container class="grow fill-height d-flex flex-column flex-nowrap">
+          <v-row class="shrink"> </v-row>
+          <v-row class="shrink">
+            <v-col cols="12">
+              <v-card
+                elevation="2"
+                class="pa-3 animate__animated animate__bounce animate__infinite"
+                ><h1 class="text-center">Hello</h1>
+                <h2 class="text-center">Generation SG</h2></v-card
+              >
+            </v-col>
+          </v-row>
+          <v-row class="shrink"> </v-row>
+        </v-container>
+      </template>
     </v-img>
-    <div id="photo" class="photo slide-in-elliptic-top-fwd" v-if="showPhoto">
+    <!-- <div id="photo" class="photo slide-in-elliptic-top-fwd" v-if="showPhoto">
       <img class="responsive" src="@/assets/SgUnited2.jpeg" />
-    </div>
-  </div>
+    </div> -->
+  </v-row>
 </template>
 
 <script>
@@ -30,11 +34,11 @@ import confetti from "canvas-confetti";
 
 export default {
   name: "Header",
-  data() {
-    return {
-      showPhoto: false,
-    };
-  },
+  data: () => ({
+    model: 0,
+    colors: ["primary", "secondary", "yellow darken-2", "red", "orange"],
+    showPhoto: false,
+  }),
   mounted: function () {
     this.fireConfetti();
     // this.showImage();
