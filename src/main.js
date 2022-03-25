@@ -1,24 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import "animate.css";
 
-createApp(App).mount('#app')
+Vue.config.productionTip = false;
 
-var duration = 15 * 1000;
-var animationEnd = Date.now() + duration;
-var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-function randomInRange(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
-var interval = setInterval(function() {
-  var timeLeft = animationEnd - Date.now();
-
-  if (timeLeft <= 0) {
-    return clearInterval(interval);
-  }
-
-  var particleCount = 50 * (timeLeft / duration);
-  confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-  confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
-}, 250);
+new Vue({
+  vuetify,
+  render: (h) => h(App),
+}).$mount("#app");

@@ -1,4 +1,4 @@
-# myapp
+# generationsg-demo
 
 ## Project setup
 ```
